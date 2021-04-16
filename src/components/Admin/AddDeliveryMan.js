@@ -21,7 +21,7 @@ const  AddDeliveryMan = () => {
 
     const DeliveryMan = {fullName,telephone};
 
-	axios.post(`http://localhost:3030/Admin/addDelivery`,DeliveryMan)
+	axios.post(`https://tarekmarket-api.herokuapp.com/Admin/addDelivery`,DeliveryMan)
           
 		.then(res => {
 		    if(res.error){

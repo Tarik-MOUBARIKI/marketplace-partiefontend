@@ -18,7 +18,7 @@ const DashbordAdmin = () => {
 
 useEffect(()=>{
 
-  axios.get(`http://localhost:3030/Admin/getAllDelivery`)
+  axios.get(`https://tarekmarket-api.herokuapp.com/Admin/getAllDelivery`)
     .then(function (response) {
         
       setDelivery(response.data.length)
@@ -32,7 +32,7 @@ useEffect(()=>{
 
 useEffect(()=>{
 
-  axios.get(`http://localhost:3030/Admin/getAllOrder`)
+  axios.get(`https://tarekmarket-api.herokuapp.com/Admin/getAllOrder`)
     .then(function (response) {
         
       setOrdersLength(response.data.length)

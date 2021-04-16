@@ -23,7 +23,7 @@ const  AddAdmin = () => {
 
     const Admin = {firstName,lastName,email,login,password};
 
-	axios.post(`http://localhost:3030/superAdmin/addAdmin`,Admin)
+	axios.post(`https://tarekmarket-api.herokuapp.com/superAdmin/addAdmin`,Admin)
           
 		.then(res => {
 		    if(res.error){

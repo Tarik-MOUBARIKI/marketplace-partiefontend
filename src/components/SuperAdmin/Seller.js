@@ -13,7 +13,7 @@ const ConfirmSeller = () => {
 
   useEffect(()=>{
 
-    axios.get(`http://localhost:3030/superAdmin/getAllSellers`)
+    axios.get(`https://tarekmarket-api.herokuapp.com/superAdmin/getAllSellers`)
       .then(function (response) {
           
         setSellers(response.data)
@@ -27,7 +27,7 @@ const ConfirmSeller = () => {
 
   // delete Admin 
   const deleteSeller = (id)=>{
-    axios.delete(`http://localhost:3030/superAdmin/deleteSeller/${id}`)
+    axios.delete(`https://tarekmarket-api.herokuapp.com/superAdmin/deleteSeller/${id}`)
     .then(function (response) {
       console.log('item was deleted Succesfully ... ');
     

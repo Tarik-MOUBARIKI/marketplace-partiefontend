@@ -13,7 +13,7 @@ const Admin = () => {
 
   useEffect(()=>{
 
-    axios.get(`http://localhost:3030/superAdmin/getAllAdmins`)
+    axios.get(`https://tarekmarket-api.herokuapp.com/superAdmin/getAllAdmins`)
       .then(function (response) {
           
         setAdmins(response.data)
@@ -29,7 +29,7 @@ const Admin = () => {
   const deleteAdmin = (id)=>{
     var msgConfirmation = window.confirm("Are You Sure Yo want to delete this Product ?");
     if (msgConfirmation) {
-    axios.delete(`http://localhost:3030/superAdmin/deleteAdmin/${id}`)
+    axios.delete(`https://tarekmarket-api.herokuapp.com/superAdmin/deleteAdmin/${id}`)
     .then(function (response) {
       console.log('item was deleted Succesfully ... ');
     

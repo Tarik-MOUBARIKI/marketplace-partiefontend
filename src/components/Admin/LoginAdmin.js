@@ -16,7 +16,7 @@ const  LoginAdmin = () => {
 
 	const Admin = {login,password};
 
-	axios.post(`http://localhost:3030/Admin/login`,Admin)
+	axios.post(`https://tarekmarket-api.herokuapp.com/Admin/login`,Admin)
 		.then(res => {
 			console.log(res)
 

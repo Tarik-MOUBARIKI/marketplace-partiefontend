@@ -24,7 +24,7 @@ const  EditProduct = () => {
     // ---------------------get Product to update-----------------------------
 useEffect(()=>{
 
-    axios.get(`http://localhost:3030/Seller/getProductById/${idProduct}`)
+    axios.get(`https://tarekmarket-api.herokuapp.com/Seller/getProductById/${idProduct}`)
     .then(function (response) {
      
         setTitel(response.data.titel)
@@ -54,7 +54,7 @@ useEffect(()=>{
 
     const Product = {titel,description,price,productImg,category,quantity, idSeller:IdSeller,status};
 
-	axios.put(`http://localhost:3030/Seller/updateProduct/${idProduct}`,Product)
+	axios.put(`https://tarekmarket-api.herokuapp.com/Seller/updateProduct/${idProduct}`,Product)
     .then(res => {
     if(res.error){
       return false

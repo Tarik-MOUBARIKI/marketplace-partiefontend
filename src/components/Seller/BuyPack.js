@@ -21,7 +21,7 @@ export default function BuyPack() {
           price : 3000
       }
 
-       await axios.post(`http://localhost:3030/BuyAccount/buyAccount`,{token,product})
+       await axios.post(`https://tarekmarket-api.herokuapp.com/BuyAccount/buyAccount`,{token,product})
         .then(function (response) {
           const { status } = response.data;
           console.log("Response:", response.data);
@@ -51,7 +51,7 @@ export default function BuyPack() {
       }
      
 
-      await axios.post(`http://localhost:3030/BuyAccount/buyAccount`,{token,product})
+      await axios.post(`https://tarekmarket-api.herokuapp.com/BuyAccount/buyAccount`,{token,product})
         .then(function (response) {
           const { status } = response.data;
           console.log("Response:", response.data);

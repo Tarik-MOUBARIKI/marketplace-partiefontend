@@ -15,7 +15,7 @@ const Dashbord = () => {
 
   useEffect(()=>{
 
-    axios.get(`http://localhost:3030/superAdmin/getAllAdmins`)
+    axios.get(`https://tarekmarket-api.herokuapp.com/superAdmin/getAllAdmins`)
       .then(function (response) {
           
         setAdmins(response.data)
@@ -31,7 +31,7 @@ const Dashbord = () => {
 
 useEffect(()=>{
 
-  axios.get(`http://localhost:3030/superAdmin/getAllSellers`)
+  axios.get(`https://tarekmarket-api.herokuapp.com/superAdmin/getAllSellers`)
     .then(function (response) {
         
       setSellers(response.data.length)

@@ -16,7 +16,7 @@ const  Login = () => {
 
 	const superAdmin = {login,password};
 
-	axios.post(`http://localhost:3030/superAdmin/login`, superAdmin)
+	axios.post(`https://tarekmarket-api.herokuapp.com/superAdmin/login`, superAdmin)
 		.then(res => {
 			console.log(res)
 

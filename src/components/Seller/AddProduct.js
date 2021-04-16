@@ -31,7 +31,7 @@ const  AddProduct = () => {
 
     const Product = {titel,description,price,productImg,category,quantity, idSeller:IdSeller,status,id};
 
-	axios.post(`http://localhost:3030/Seller/addProduct`,Product)
+	axios.post(`https://tarekmarket-api.herokuapp.com/Seller/addProduct`,Product)
           
 		.then(res => {
 		    if(res.error){

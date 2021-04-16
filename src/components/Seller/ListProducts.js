@@ -18,7 +18,7 @@ const  ListProducts=()=> {
     
       useEffect(()=>{
     
-        axios.get(`http://localhost:3030/Seller/getProductBySellername/${IdSeller}`)
+        axios.get(`https://tarekmarket-api.herokuapp.com/Seller/getProductBySellername/${IdSeller}`)
           .then(function (response) {
               
             setListProducts(response.data)
@@ -35,7 +35,7 @@ const  ListProducts=()=> {
   const deleteProduct = (id)=>{
     var msgConfirmation = window.confirm("Are You Sure Yo want to delete this Product ?");
     if (msgConfirmation) {   
-    axios.delete(`http://localhost:3030/Seller/deleteProduct/${id}`)
+    axios.delete(`https://tarekmarket-api.herokuapp.com/Seller/deleteProduct/${id}`)
     .then(function (response) {
         window.location.reload();
       console.log('item was deleted Succesfully ... ');

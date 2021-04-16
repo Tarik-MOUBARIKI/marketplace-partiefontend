@@ -12,7 +12,7 @@ const DashbordSeller = () => {
 
 useEffect(()=>{
 
-  axios.get(`http://localhost:3030/Seller/getAllProduct`)
+  axios.get(`https://tarekmarket-api.herokuapp.com/Seller/getAllProduct`)
     .then(function (response) {
         
       setProduct(response.data.length)
@@ -34,7 +34,7 @@ const logOut =()=>{
     const [listProductsLength, setlistProductsLength] = useState();
         
     const IdSeller=localStorage.getItem('IdSeller');
-    axios.get(`http://localhost:3030/Seller/getProductBySellername/${IdSeller}`)
+    axios.get(`https://tarekmarket-api.herokuapp.com/Seller/getProductBySellername/${IdSeller}`)
     .then(function (response) {
         
       setlistProductsLength(response.data.length)

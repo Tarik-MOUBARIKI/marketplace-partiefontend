@@ -18,7 +18,7 @@ const EditDeliveryMan=()=> {
 // ---------------------get DeliveryMan to update-----------------------------
 useEffect(()=>{
 
-  axios.get(`http://localhost:3030/Admin/getDeliveryById/${id_DeliveryMan}`)
+  axios.get(`https://tarekmarket-api.herokuapp.com/Admin/getDeliveryById/${id_DeliveryMan}`)
   .then(function (response) {
    
     setType(response.data.type)
@@ -40,7 +40,7 @@ var id = idDeliveryMan.value;
 
 const data = {type:id,fullName,telephone};
 
-axios.put(`http://localhost:3030/Admin/updateDelivery/${id_DeliveryMan}`,data)
+axios.put(`https://tarekmarket-api.herokuapp.com/Admin/updateDelivery/${id_DeliveryMan}`,data)
 .then(res => {
   if(res.error){
     return false

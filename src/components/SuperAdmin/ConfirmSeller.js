@@ -17,7 +17,7 @@ const ConfirmSeller=()=> {
 // ---------------------get Admin to update-----------------------------
 useEffect(()=>{
 
-  axios.get(`http://localhost:3030/superAdmin/getSellerById/${id_seller}`)
+  axios.get(`https://tarekmarket-api.herokuapp.com/superAdmin/getSellerById/${id_seller}`)
   .then(function (response) {
    
     setType(response.data.type)
@@ -38,7 +38,7 @@ var id = idSeller.value;
 var id2 = idSeller2.value;
 const data = {type:id,status:id2};
 
-axios.put(`http://localhost:3030/superAdmin/updateSeller/${id_seller}`,data)
+axios.put(`https://tarekmarket-api.herokuapp.com/superAdmin/updateSeller/${id_seller}`,data)
 .then(res => {
   if(res.error){
     return false

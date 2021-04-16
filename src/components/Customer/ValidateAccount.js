@@ -13,7 +13,7 @@ const ValidateAccount = () => {
 
     useEffect(()=>{
 
-        axios.put(`http://localhost:3030/Customer/activateCompte/${token}`)
+        axios.put(`https://tarekmarket-api.herokuapp.com/Customer/activateCompte/${token}`)
 		.then(res => {
 
           history.push('/loginCustomer');

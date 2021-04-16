@@ -24,7 +24,7 @@ const  SignInCustomer = () => {
 
     const Seller = {firstName,lastName,email,login,password};
 
-	axios.post(`http://localhost:3030/Customer/authentication`,Seller)
+	axios.post(`https://tarekmarket-api.herokuapp.com/Customer/authentication`,Seller)
           
 		.then(res => {
 		    if(res.error){

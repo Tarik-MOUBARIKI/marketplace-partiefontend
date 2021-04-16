@@ -20,7 +20,7 @@ const ListOrder = () => {
 
 useEffect(()=>{
 
-  axios.get(`http://localhost:3030/Admin/getAllOrder`)
+  axios.get(`https://tarekmarket-api.herokuapp.com/Admin/getAllOrder`)
     .then(function (response) {
         
       setOrders(response.data)
@@ -37,7 +37,7 @@ useEffect(()=>{
   const validateOrder = (id) => {
 
     
-    axios.put(`http://localhost:3030/Admin/validateOrder/${id}`)
+    axios.put(`https://tarekmarket-api.herokuapp.com/Admin/validateOrder/${id}`)
     .then(res => {
     console.log(res);
 
@@ -55,7 +55,7 @@ useEffect(()=>{
 const deleteOrder = (id)=>{
   var msgConfirmation = window.confirm("Are You Sure Yo want to delete this Order ?");
   if (msgConfirmation) {   
-  axios.delete(`http://localhost:3030/Admin/deleteOrder/${id}`)
+  axios.delete(`https://tarekmarket-api.herokuapp.com/Admin/deleteOrder/${id}`)
   .then(function (response) {
       window.location.reload();
       toastr.success("Order deleted Successfully", {

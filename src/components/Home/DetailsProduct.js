@@ -19,7 +19,7 @@ const DetailsProduct=()=> {
   // get all admin and show it in table
   
   useEffect(()=>{  
-    axios.get(`http://localhost:3030/Seller/getProductById/${idPdts}`)
+    axios.get(`https://tarekmarket-api.herokuapp.com/Seller/getProductById/${idPdts}`)
       .then(function (response) {        
         setProduct(response.data)
         console.log(product);
@@ -46,7 +46,7 @@ const DetailsProduct=()=> {
         console.log(data.rates[currency]);        
       });
     
-      axios.get(`http://localhost:3030/Seller/getProductById/${idPdts}`)
+      axios.get(`https://tarekmarket-api.herokuapp.com/Seller/getProductById/${idPdts}`)
       .then(function (response) {        
         setProduct(response.data)
         console.log(product);
@@ -59,7 +59,7 @@ const DetailsProduct=()=> {
 
 
     function handleToken(token) {
-      axios.post(`http://localhost:3030/Checkout/checkout`,{token,product})
+      axios.post(`https://tarekmarket-api.herokuapp.com/Checkout/checkout`,{token,product})
       .then(function (response) {
         const { status } = response.data;
         console.log("Response:", response.data);

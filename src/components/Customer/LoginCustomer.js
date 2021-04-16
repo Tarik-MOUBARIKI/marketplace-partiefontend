@@ -19,7 +19,7 @@ const LoginCustomer=()=> {
 
     const customer = {login,password};
 
-    axios.post(`http://localhost:3030/Customer/loginCustomer`,customer)
+    axios.post(`https://tarekmarket-api.herokuapp.com/Customer/loginCustomer`,customer)
 		.then(res => {
             console.log(res)
         if(!res.data.message){ 

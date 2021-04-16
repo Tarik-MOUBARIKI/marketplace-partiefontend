@@ -11,7 +11,7 @@ const {category} = useParams();
 
   useEffect(()=>{
     
-    axios.get(`http://localhost:3030/Product/getProductByCategory/${category}`)
+    axios.get(`https://tarekmarket-api.herokuapp.com/Product/getProductByCategory/${category}`)
       .then(function (response) {
           
         setProducts(response.data)

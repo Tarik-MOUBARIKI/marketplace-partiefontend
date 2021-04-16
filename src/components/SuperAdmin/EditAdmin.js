@@ -16,7 +16,7 @@ const  EditAdmin = () => {
 // ---------------------get Admin to update-----------------------------
 useEffect(()=>{
 
-    axios.get(`http://localhost:3030/superAdmin/getAdminById/${id_admin}`)
+    axios.get(`https://tarekmarket-api.herokuapp.com/superAdmin/getAdminById/${id_admin}`)
     .then(function (response) {
      
         setFirstName(response.data.firstName)
@@ -38,7 +38,7 @@ const handleSubmit = (e) => {
 
 const data = {firstName,lastName,email,login,password};
 
-axios.put(`http://localhost:3030/superAdmin/updateAdmin/${id_admin}`,data)
+axios.put(`https://tarekmarket-api.herokuapp.com/superAdmin/updateAdmin/${id_admin}`,data)
   .then(res => {
     if(res.error){
       return false

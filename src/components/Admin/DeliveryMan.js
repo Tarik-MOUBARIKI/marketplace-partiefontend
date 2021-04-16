@@ -15,7 +15,7 @@ const DeliveryMan = () => {
   
     useEffect(()=>{
   
-      axios.get(`http://localhost:3030/Admin/getAllDelivery`)
+      axios.get(`https://tarekmarket-api.herokuapp.com/Admin/getAllDelivery`)
         .then(function (response) {
             
             setDeliveryMan(response.data)
@@ -30,7 +30,7 @@ const DeliveryMan = () => {
   const deleteDeliveryMan= (id)=>{
     var msgConfirmation = window.confirm("Are You Sure Yo want to delete this Product ?");
     if (msgConfirmation) {
-    axios.delete(`http://localhost:3030/Admin/deleteDelivery/${id}`)
+    axios.delete(`https://tarekmarket-api.herokuapp.com/Admin/deleteDelivery/${id}`)
     .then(function (response) {
       console.log('item was deleted Succesfully ... ');
     

@@ -15,7 +15,7 @@ const AcceuilCustomer=()=> {
 
 useEffect(()=>{
 
-  axios.get(`http://localhost:3030/Seller/getAllProduct`)
+  axios.get(`https://tarekmarket-api.herokuapp.com/Seller/getAllProduct`)
     .then(function (response) {
         
       setProducts(response.data)
